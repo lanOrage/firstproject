@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main_index</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main_index.css">
+    <style>
+        .content_block p{
+            display: block;
+            height: 63px;
+            line-height: 63px;
+        }
+        .box {
+            display: inline-block;
+            width: 340px;
+            height: 160px;
+            margin-right: 20px;
+            border: solid 1px #cccccc;
+            position: relative;
+        }
+        .box>.text{
+            display:inline-block;
+            width: 100px;
+            position: absolute;
+            top: 38px;
+            left: 155px;
+            color: #707070;
+            font-size: 13px;
+            line-height: 24px;
+        }
+        .box>.text>span{
+            color: #000000;
+            font-weight:500;
+        }
+        .box_bg{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        .content_1{
+            position: relative;
+        }
+        .content_1 p,.content_2 p{
+            color: #666666;
+        }
+        #tag{
+            width: 56px;
+            height: 20px;
+            background: url("img/16.png");
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            position: absolute;
+            left: 286px;
+            bottom: 4px;
+        }
+        #bg_tag{
+            width: 24px;
+            height: 24px;
+            background: url("img/4.png");
+            position: absolute;
+            left: 10px;
+            top: 1px;
+        }
+        #clickme{
+            display: inline-block;
+            width: 340px;
+            height: 160px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_index">
+        <!--顶部导航-->
+        <header id="header">
+            <div id="header_logo">
+                    <div id="lheader_logo"><img src="img/6.png" alt="logo"></div>
+                    <div class="header_nav">
+                        <ul id="header-ul_nav">
+                            <li>首页</li>
+                            <li style="color: #3ba8f0; ">教学管理</li>
+                            <li>学习</li>
+                            <li>资源超市</li>
+                            <li>教育应用</li>
+                            <li>新闻</li>
+                            <li>名师名校</li>
+                        </ul>
+                        <div class="h_logo">
+                            <i id="logo_newfunc"></i>
+                            <i id="logo_search"></i>
+                            <i id="logo_user"></i>
+                            <p>CoCo</p>
+                        </div>
+                    </div>
+            </div>
+        </header>
+        <div class="hr"></div>
+        <!--左侧栏-->
+        <div class="left_content">
+            <div class="left">
+                <div class="aside_header left_content_font">
+                    <i id="icon_left"></i>
+                    <i id="icon_right"></i>
+                    <p>个人中心</p>
+                </div>
+                <ul class="aside-content_ul">
+                    <li><i id="aside_icon_logo1"></i>其他内容</li>
+                    <li><i id="aside_icon_logo2"></i>其他内容</li>
+                    <li id="li_third"><i id="aside_icon_logo3"></i>我的班级</li>
+                    <li><i id="aside_icon_logo4"></i>其他内容</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--右侧实体内容-->
+        <div class="right_content">
+            <div class="article">
+                <p>我的班级</p>
+                <div class="button">
+                    <a href="#" class="right_button">加入班级</a>
+                    <a href="create_class.html" class="right_button">创建班级</a>
+                </div>
+            </div>
+
+            <div class="content_block">
+
+                <div class="content_1">
+                    <p>行政班是为学生管理和教学管理而设置的班级</p>
+                    <a id="clickme" href="check_class.html">
+                    <div class="box" id="box_1" >
+                        <div class="box_bg">
+                            <img src="img/7.png" alt="logo_7">
+                        </div>
+                        <div class="text">
+                            <span>高中-2013级</span><br>
+                            班级：<span>三年二班</span><br>
+                            班主任：<span>田小雨</span><br>
+                            学生：<span>33人</span></div>
+                    </div>
+                    <div id="tag">行政班</div>
+                    </a>
+                </div>
+
+                <div class="content_2">
+                    <p>教学班是根据课程教学要求而设置的班级</p>
+                    <div>
+                        <div class="box" id="box1">
+                            <div class="box_bg">
+                                <img src="img/7.png" alt="logo_7">
+                                <span id="bg_tag"></span>
+                            </div>
+                            <div class="text">
+                                <span>高中-2013级</span><br>
+                                班级：<span>三年二班</span><br>
+                                班主任：<span>田小雨</span><br>
+                                学生：<span>33人</span></div>
+                        </div>
+                        <div class="box" id="box2">
+                            <div class="box_bg"><img src="img/7.png" alt="logo_7"></div>
+                            <div class="text">
+                                <span>高中-2013级</span><br>
+                                班级：<span>三年二班</span><br>
+                                班主任：<span>田小雨</span><br>
+                                学生：<span>33人</span></div>
+                        </div>
+                        <div class="box" id="box3">
+                            <div class="box_bg"><img src="img/7.png" alt="logo_7"></div>
+                            <div class="text">
+                                <span>高中-2013级</span><br>
+                                班级：<span>三年二班</span><br>
+                                班主任：<span>田小雨</span><br>
+                                学生：<span>33人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
