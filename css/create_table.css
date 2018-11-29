@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 .info{
-    width: 550px;
-    height: 400px;
     margin-top: 20px;
 }
 .info>p{
@@ -11,8 +9,12 @@
 .info>p>span{
      color: #3ba8f0;
  }
-
-#info_table th{
+.info_table{
+    display: inline-block;
+    width: 1000px;
+    /*border: 1px solid #cccccc;*/
+}
+.info_table th{
     text-align: right;
     line-height: 36px;
     width: 118px;
@@ -20,42 +22,76 @@
     padding-bottom: 20px;
     color: #666666;
 }
-#info_table td{
+.info_table td{
     box-sizing: border-box;
     text-align: left;
     padding-bottom: 20px;
     position: relative;
     font-size: 14px;
  }
-#info_table tr{
+.info_table tr{
     position: relative;
+    width:100%;
 }
-#info_table th span{
+.info_table th span{
      display:inline-block;
      color: red;
      margin-right: 5px;
  }
-#info_table td input{
+.info_table td input{
     width: 400px;
     height: 36px;
 }
-#info_table td span{
+/*#info_table td span{
     margin-right: 8px;
     display: inline-block;
     width: 20px;
     height: 20px;
     background: url("../img/radio_none.png") no-repeat;
+    vertical-align: -3px;
+}*/
+input[type="radio"] + label::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 5px;
+    margin-left:6px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    line-height: 15px;
+    box-sizing: border-box;
 }
-#info_table td span:nth-of-type(1){
+input[type="radio"]:checked + label::before {
+    border:1px solid  #3ba8f0;
+    background-color: #3ba8f0;
+    background-clip: content-box;
+    padding: 2px;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+td.warning{
+  /*  display:inline-block;*/
+    text-indent: 2em;
+    width: 400px;
+    height: 36px;
+    color: red;
+    font-size: 12px;
+}
+/*#info_table td span:nth-of-type(1){
     background: url("../img/radio.png") no-repeat;
-}
+}*/
 .select{
      width: 15px !important;
      height: 15px !important;
      background: url("../img/select.png")!important;
      position:absolute ;
-     right: 0px;
-     top: 10px;
+     right: 10px;
+     top: 12px;
     cursor: pointer;
 
 }
@@ -67,25 +103,42 @@
 
 }
 .option{
+    background: #ffffff;
     position: absolute;
-    top: 150px;
-    right: 80px;
-    width: 119px;
-    height: 112px;
+    top: 211px;
+    left: 148px;
+    width: 402px;
+    height: auto;
     border: 1px solid #cccccc;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-    z-index: 999 !important;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
 }
-.option>li{
-    width: 115px;
-    height: 28px;
-    line-height: 28px;
-    padding-left: 4px;
+.option2{
+    background: #ffffff;
+    position: absolute;
+    top: 271px;
+    left: 146px;
+    width: 402px;
+    height: auto;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+.option>li,.option2>li{
+    list-style: none;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    color: #828282;
+}
+.option>li:hover,.option2>li:hover{
     color: #666666;
-}
-.option>li:hover{
-    color: #666666;
-}
-.option>li:nth-of-type(1){
     background: #cccccc;
 }
+/*.option>li:nth-of-type(1){
+    background: #cccccc;
+}*/

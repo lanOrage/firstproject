@@ -5,72 +5,9 @@
     <title>main_index</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main_index.css">
-    <style>
-        .content_block p{
-            display: block;
-            height: 63px;
-            line-height: 63px;
-        }
-        .box {
-            display: inline-block;
-            width: 340px;
-            height: 160px;
-            margin-right: 20px;
-            border: solid 1px #cccccc;
-            position: relative;
-        }
-        .box>.text{
-            display:inline-block;
-            width: 100px;
-            position: absolute;
-            top: 38px;
-            left: 155px;
-            color: #707070;
-            font-size: 13px;
-            line-height: 24px;
-        }
-        .box>.text>span{
-            color: #000000;
-            font-weight:500;
-        }
-        .box_bg{
-            position: absolute;
-            top: 30px;
-            left: 30px;
-        }
-        .content_1{
-            position: relative;
-        }
-        .content_1 p,.content_2 p{
-            color: #666666;
-        }
-        #tag{
-            width: 56px;
-            height: 20px;
-            background: url("img/16.png");
-            color: #fff;
-            text-align: center;
-            line-height: 20px;
-            font-size: 12px;
-            position: absolute;
-            left: 286px;
-            bottom: 4px;
-        }
-        #bg_tag{
-            width: 24px;
-            height: 24px;
-            background: url("img/4.png");
-            position: absolute;
-            left: 10px;
-            top: 1px;
-        }
-        #clickme{
-            display: inline-block;
-            width: 340px;
-            height: 160px;
-            cursor: pointer;
-        }
-    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/myjs.js"></script>
+    <link rel="stylesheet" href="css/main_index2.css">
 </head>
 <body>
     <div class="main_index">
@@ -129,52 +66,50 @@
 
                 <div class="content_1">
                     <p>行政班是为学生管理和教学管理而设置的班级</p>
-                    <a id="clickme" href="check_class.html">
-                    <div class="box" id="box_1" >
+                    <div>
+                        <a class="click_me" href="check_class.html">
+                    <div class="box">
                         <div class="box_bg">
                             <img src="img/7.png" alt="logo_7">
                         </div>
-                        <div class="text">
-                            <span>高中-2013级</span><br>
-                            班级：<span>三年二班</span><br>
-                            班主任：<span>田小雨</span><br>
-                            学生：<span>33人</span></div>
                     </div>
                     <div id="tag">行政班</div>
-                    </a>
+                </a>
+                    </div>
                 </div>
 
                 <div class="content_2">
                     <p>教学班是根据课程教学要求而设置的班级</p>
                     <div>
-                        <div class="box" id="box1">
-                            <div class="box_bg">
-                                <img src="img/7.png" alt="logo_7">
-                                <span id="bg_tag"></span>
+                        <a class="click_me" href="check_class.html">
+                            <div class="box">
+                                <div class="box_bg">
+                                    <img src="img/7.png" alt="logo_7">
+                                    <span id="bg_tag"></span>
+                                </div>
                             </div>
-                            <div class="text">
-                                <span>高中-2013级</span><br>
-                                班级：<span>三年二班</span><br>
-                                班主任：<span>田小雨</span><br>
-                                学生：<span>33人</span></div>
-                        </div>
-                        <div class="box" id="box2">
-                            <div class="box_bg"><img src="img/7.png" alt="logo_7"></div>
-                            <div class="text">
-                                <span>高中-2013级</span><br>
-                                班级：<span>三年二班</span><br>
-                                班主任：<span>田小雨</span><br>
-                                学生：<span>33人</span></div>
-                        </div>
-                        <div class="box" id="box3">
-                            <div class="box_bg"><img src="img/7.png" alt="logo_7"></div>
-                            <div class="text">
-                                <span>高中-2013级</span><br>
-                                班级：<span>三年二班</span><br>
-                                班主任：<span>田小雨</span><br>
-                                学生：<span>33人</span>
+                        </a>
+                        <a class="click_me" href="check_class.html">
+                            <div class="box">
+                                <div class="box_bg">
+                                    <img src="img/7.png" alt="logo_7">
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                        <a class="click_me" href="check_class.html">
+                            <div class="box">
+                                <div class="box_bg">
+                                    <img src="img/7.png" alt="logo_7">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="click_me" href="check_class.html">
+                            <div class="box">
+                                <div class="box_bg">
+                                    <img src="img/7.png" alt="logo_7">
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

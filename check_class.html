@@ -12,7 +12,7 @@
             height: 50px;
             position: absolute;
             right: 20px;
-            top: 0px;
+            top: 0;
         }
         .right_button{
             display: inline-block;
@@ -29,6 +29,8 @@
             border-radius: 2px;
         }
     </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/check_class.js"></script>
 </head>
 <body>
 <!--导航栏/侧边栏类似-->
@@ -89,17 +91,17 @@
             <div id="maincontent_header">
                 <span>折纸兴趣班</span>
                 <div class="class_search">
-                    <input type="text" placeholder="快速查找">
-                    <i id="icon_search"></i>
+                    <input id="quick_search" type="text" placeholder="快速查找" value="">
+                    <a id="class_search" href="#"></a>
                 </div>
             </div>
             <div class="tab_class">
-                <ul>
-                    <li id="selected">所有老师（10）</li>
+                <ul class="tab_items">
+                    <li class="selected">所有老师（10）</li>
                     <li>所有学生（10）</li>
                     <li>所有家长（10）</li>
                 </ul>
-                <div class="boxs_teachers">
+                <div class="boxs boxs_teachers">
                     <div class="firstline">
                         <div class="box_tea">
                             <div class="photo_tea">
@@ -129,73 +131,118 @@
                             </div>
                             <p>柳云</p>
                         </div>
+                    </div>
+                </div>
+                <div class="boxs boxs_students">
+                    <div class="firstline">
                         <div class="box_tea">
                             <div class="photo_tea">
                                 <img src="img/18.png" alt="img_chid">
                                 <div class="tea_tag">
-                                    <span>生物老师</span>
+                                    <span  class="ellipsis">生物科代表</span><span>班长</span>
                                 </div>
                             </div>
                             <div class="hidden">
-                                <span class="imp_tag">管理员</span><span>英语老师</span>
-                                <span>科学</span><span>信息与技术</span><span>历史</span>
-                                <span>语文</span><span>地理</span><span>语文</span><span>生物老师</span>
+                                <span>生物科代表</span><span>班长</span>
                             </div>
                             <p>柳云</p>
                         </div>
                         <div class="box_tea">
                             <div class="photo_tea">
                                 <img src="img/18.png" alt="img_chid">
-                                <div class="tea_tag"><span>语文老师</span></div>
+                                <div class="tea_tag">
+                                    <span  class="ellipsis">数学科代表</span>
+                                </div>
                             </div>
                             <div class="hidden">
-                                <span class="imp_tag">班主任</span><span>地理老师</span>
-                                <span>科学</span><span>信息与技术</span><span>历史</span>
-                                <span>语文</span><span>地理</span><span>语文</span><span>生物老师</span>
+                                <span>数学科代表</span>
+                            </div>
+                            <p>柳云</p>
+                        </div>
+                        <div class="box_tea">
+                            <div class="photo_tea">
+                                <img src="img/18.png" alt="img_chid">
+                                <div class="tea_tag"><span class="ellipsis">信息与技术科代表</span></div>
+                            </div>
+                            <div class="hidden">
+                                <span>信息与技术科代表</span>
                             </div>
                             <p>张三三</p>
                         </div>
                         <div class="box_tea">
                             <div class="photo_tea">
                                 <img src="img/18.png" alt="img_chid">
-                                <div class="tea_tag"><span>生物老师</span></div>
+                                <!--<div class="tea_tag"></div>-->
                             </div>
                             <div class="hidden">
-                                <span class="imp_tag">班主任</span><span>地理老师</span>
-                                <span>科学</span><span>信息与技术</span><span>历史</span>
-                                <span>语文</span><span>地理</span><span>语文</span><span>生物老师</span>
                             </div>
-                            <p>李思思</p>
+                            <p>林彦俊</p>
                         </div>
                         <div class="box_tea">
                             <div class="photo_tea">
                                 <img src="img/18.png" alt="img_chid">
-                                <div class="tea_tag"><span>生物老师</span></div>
+                                <!--<div class="tea_tag"></div>-->
                             </div>
                             <div class="hidden">
-                                <span class="imp_tag">班主任</span><span>地理老师</span>
-                                <span>科学</span><span>信息与技术</span><span>历史</span>
-                                <span>语文</span><span>地理</span><span>语文</span><span>生物老师</span>
+                            </div>
+                            <p>林小橘</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxs boxs_parents">
+                    <div class="firstline">
+                        <div class="box_tea">
+                            <div class="photo_tea">
+                                <img src="img/18.png" alt="img_chid">
+                                <div class="tea_tag">
+                                    <span>大明</span><span>大明</span><span>大明</span>
+                                </div>
+                            </div>
+                            <div class="hidden">
+                                <span>大明</span><span>大明</span><span>大明</span>
                             </div>
                             <p>柳云</p>
                         </div>
                         <div class="box_tea">
                             <div class="photo_tea">
                                 <img src="img/18.png" alt="img_chid">
-                                <div class="tea_tag"><span>生物老师</span></div>
+                                <div class="tea_tag">
+                                    <span>小明</span>
+                                </div>
                             </div>
                             <div class="hidden">
-                                <span class="imp_tag">班主任</span><span>地理老师</span>
-                                <span>科学</span><span>信息与技术</span><span>历史</span>
-                                <span>语文</span><span>地理</span><span>语文</span><span>生物老师</span>
+                                <span>小明</span>
                             </div>
                             <p>柳云</p>
                         </div>
+                        <div class="box_tea">
+                            <div class="photo_tea">
+                                <img src="img/18.png" alt="img_chid">
+                                <div class="tea_tag">
+                                    <span>周刘西子</span>
+                                </div>
+                            </div>
+                            <div class="hidden">
+                                <span>周刘西子</span>
+                            </div>
+                            <p>柳云</p>
+                        </div>
+                        <div class="box_tea">
+                        <div class="photo_tea">
+                            <img src="img/18.png" alt="img_chid">
+                            <!--<div class="tea_tag"></div>-->
+                        </div>
+                        <div class="hidden">
+                        </div>
+                        <p>兰锦敏</p>
+                    </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
+    </div>
     </div>
 </body>
 </html>

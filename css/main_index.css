@@ -145,6 +145,7 @@ i#icon_left{
     height:18px;
     margin-right: 20px;
     margin-left: 24px;
+    vertical-align: -3px;
 }
 #aside_icon_logo2{
     display: inline-block;
@@ -153,6 +154,7 @@ i#icon_left{
     height:18px;
     margin-right: 20px;
     margin-left: 24px;
+    vertical-align: -3px;
 }
 #aside_icon_logo3{
     display: inline-block;
@@ -161,6 +163,7 @@ i#icon_left{
     height:18px;
     margin-right: 17px;
     margin-left: 24px;
+    vertical-align: -3px;
 }
 #aside_icon_logo4{
     display: inline-block;
@@ -169,6 +172,7 @@ i#icon_left{
     height:18px;
     margin-right: 20px;
     margin-left: 24px;
+    vertical-align: -3px;
 }
 
 .right_content{

@@ -43,6 +43,8 @@
             border-radius: 2px;
         }
     </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/create_class.js"></script>
 </head>
 <body>
 <!--导航栏/侧边栏类似-->
@@ -101,55 +103,67 @@
             <!--创建班级表单-->
             <div class="info">
                 <p>尊敬的<span>老师（刘老师）</span>，请填写班级信息：</p>
-                <table id="info_table">
+                <table class="info_table">
                     <tr>
                         <th>学校</th>
-                        <td><input type="text" placeholder="请选择学校"></td>
+                        <td><input type="text" id="school" placeholder="请选择学校" name="school" value=""></td>
                     </tr>
                     <tr>
                         <th><span>*</span>学段</th>
-                        <td>
-                            <input type="text" placeholder="请选择学段">
-                            <a href="#"><span class="select" id="111"></span></a>
+                        <td id="td_xd">
+                            <input type="text" id="xd" placeholder="请选择学段" value="">
+                            <a href="#"><span class="select" id="xd2"></span></a>
                         </td>
+                        <ul class="option">
+                            <li name="小学">&nbsp;&nbsp;小学</li>
+                            <li name="初中">&nbsp;&nbsp;初中</li>
+                            <li name="高中">&nbsp;&nbsp;高中</li>
+                            <li name="大学">&nbsp;&nbsp;大学</li>
+                        </ul>
                     </tr>
                     <tr>
                         <th><span>*</span>年级</th>
-                        <td>
-                            <input type="text" placeholder="请选择年段">
-                            <span class="select"><a href="#">#</a></span>
+                        <td  id="td_nd">
+                            <input type="text"  id="nd" placeholder="请选择年段" value="">
+                            <a href="#"><span class="select" id="nd2"></span></a>
                         </td>
-                        <ul class="option">
-                            <li>小学</li>
-                            <li>初中</li>
-                            <li>高中</li>
-                            <li>大学</li>
-                            <li>—></li>
-                            <li><没用js或下拉框不方便实现下拉框效果></li>
+                        <ul class="option2">
+                            <!--<li name="小学">&nbsp;&nbsp;小学</li>
+                            <li name="初中">&nbsp;&nbsp;初中</li>
+                            <li name="高中">&nbsp;&nbsp;高中</li>
+                            <li name="大学">&nbsp;&nbsp;大学</li>-->
                         </ul>
                     </tr>
                     <tr>
                         <th><span>*</span>班级名</th>
-                        <td><input type="text" placeholder="请输入班级名称，限20个字符，不支持输入_和%"></td>
+                        <td><input type="text" id="className" placeholder="请输入班级名称，限20个字符，不支持输入_和%" name="className" ></td>
                     </tr>
                     <tr>
                         <th>类型</th>
                         <td>
-                            <span></span>行政班
-                            <span></span>教学班
+                            <input type="radio" id="ra_1" name="type" value="行政班"/>
+                                    <label for="ra_1">行政班</label>
+                            <input type="radio" id="ra_2" name="type" value="教学班"/>
+                                    <label for="ra_2">教学班</label>
                         </td>
                     </tr>
                     <tr>
                         <th>退出权限设置</th>
                         <td>
-                            <span></span>允许退出
-                            <span></span>通过班级管理员审核后退出
-                            <span></span>禁止退出
+                            <input type="radio" id="ra1" name="set" value="允许退出"/>
+                                    <label for="ra1">
+                                        允许退出</label>
+                            <input type="radio" id="ra2" name="set" value="通过班级管理员审核后退出"/>
+                                    <label for="ra2">
+                                    通过班级管理员审核后退出</label>
+                            <input type="radio" id="ra3" name="set" value="禁止退出"/>
+                                    <label for="ra3">
+                                        禁止退出</label>
                         </td>
                     </tr>
                     <tr>
                         <th></th>
-                        <td><a href="#" class="save_button">保存</a></td>
+                        <td><a id="create_class_but" href="#" class="save_button">保存</a></td>
                     </tr>
                 </table>
             </div>

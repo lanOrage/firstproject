@@ -22,16 +22,15 @@
     right: -1px;
     top: 31px;
 }
-i#icon_search{
-     background:url("../img/15.png");
-     display: inline-block;
-     width: 50px;
-     height: 36px;
-     position: absolute;
-     right: 1px;
-     top:0px;
-     cursor: pointer;
- }
+#class_search{
+    display: inline-block;
+    width: 50px;
+    height: 36px;
+    position: absolute;
+    right: 1px;
+    top:0px;
+    background:url("../img/15.png");
+}
 .class_search input{
     width: 300px;
     height: 34px;
@@ -40,14 +39,14 @@ i#icon_search{
 
 .tab_class{
     width: 100%;
-    border: solid 1px #cccccc;
+
 }
 .tab_class>ul{
     width: 100%;
     height: 36px;
     background: #f5f5f5;
-    border-bottom: solid 1px #cccccc;
-    border-right: solid 1px #cccccc;
+    border: solid 1px #cccccc;
+    box-sizing: border-box;
 }
 .tab_class>ul>li{
     width: 180px;
@@ -56,41 +55,48 @@ i#icon_search{
     line-height: 36px;
     text-align: center;
 }
-#selected{
-    border-right: solid 1px #cccccc;
-    color: #3ba8f0;
-    background: #ffffff;
+.selected{
+    border-right: solid 1px #cccccc !important;
+    border-left: solid 1px #cccccc; !important;
+    color: #3ba8f0 !important;
+    background: #ffffff !important;
 }
 .tab_class>ul>li:hover{
     cursor: pointer;
     color: #3ba8f0;
     background: #ffffff;
 }
-.boxs_teachers{
+.boxs{
     width: 100%;
     height:660px;
+}
+.boxs:nth-of-type(2),.boxs:nth-of-type(3){
+    display: none;
 }
 .box_tea{
     display: inline-block;
     width: 135px;
     height: 149px;
-    margin-left: 16px;
+    margin: 8px;
     border: solid 1px #cccccc;
     position: relative;
 }
-.box_tea:first-child{
-    margin-left:0px;
-}
 .firstline{
+    width: 100%;
+    height: 600px;
+    padding-left: 18px;
+    padding-top:5px;
     box-sizing: border-box;
-    padding: 0 28px;
-    margin-top: 20px;
+    border: solid 1px #cccccc;
+    border-top: none;
+    float: left;
 }
 .box_tea>p{
     display: inline-block;
     width:100%;
     position: absolute;
     bottom: 0px;
+    right: 0px;
     font-weight: bold;
     font-size: 15px;
     text-align: center;
@@ -116,7 +122,7 @@ i#icon_search{
     left: 0;
     visibility: hidden;
 }
-.hidden>span{
+.boxs_teachers .hidden>span{
     display: inline-block;
     box-sizing: border-box;
     padding: 5px;
@@ -127,11 +133,54 @@ i#icon_search{
     float: left;
     margin-left: 5px;
 }
-.tea_tag span{
+.boxs_students .hidden>span{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 3px;
+    background: #4f92ff;
+    color: #ffffff;
+    font-size: 8px;
+    float: left;
+    margin-left: 5px;
+}
+.boxs_parents .hidden>span{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 3px;
+    background: #5ab76e;
+    color: #ffffff;
+    font-size: 8px;
+    float: left;
+    margin-left: 5px;
+}
+.boxs_teachers .tea_tag span{
     display: inline-block;
     box-sizing: border-box;
     padding: 5px;
     background:#f99d43;
+    color: #ffffff;
+    font-size: 8px;
+    float: right;
+    margin-left: 3px;
+}
+.boxs_students .tea_tag span{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    background:#4f92ff;
+    color: #ffffff;
+    font-size: 8px;
+    float: right;
+    margin-left: 3px;
+    max-width: 55px;
+}
+.boxs_parents .tea_tag span{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    background:#5ab76e;
     color: #ffffff;
     font-size: 8px;
     float: right;
@@ -144,5 +193,10 @@ i#icon_search{
 }
 .imp_tag{
     background: red !important;
+}
+.ellipsis{/*单行文本溢出*/
+    overflow: hidden;
+    text-overflow:ellipsis;/*文本溢出显示省略号*/
+    white-space:nowrap;/*文本不会换行（单行文本溢出）*/
 }
 

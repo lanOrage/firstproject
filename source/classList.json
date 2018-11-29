@@ -1,0 +1,57 @@
+[
+  {
+    "grade":"高中-2013级",
+    "class":"三年二班",
+    "teacher":"田小雨",
+    "stu_num":"33人"
+  },
+  {
+    "grade":"高中-2013级",
+    "class":"三年三班",
+    "teacher":"田中雨",
+    "stu_num":"33人"
+  },
+  {
+    "grade":"高中-2013级",
+    "class":"三年四班",
+    "teacher":"田大雨",
+    "stu_num":"35人"
+  },
+  {
+    "grade":"高中-2013级",
+    "class":"三年五班",
+    "teacher":"田暴雨",
+    "stu_num":"34人"
+  },
+  {
+  "grade":"高中-2013级",
+  "class":"三年四班",
+  "teacher":"田细雨",
+  "stu_num":"35人"
+},{
+  "grade":"高中-2013级",
+  "class":"三年四班",
+  "teacher":"田雷阵雨",
+  "stu_num":"35人"
+},{
+  "grade":"高中-2013级",
+  "class":"三年四班",
+  "teacher":"田毛毛雨",
+  "stu_num":"35人"
+},{
+  "grade":"高中-2013级",
+  "class":"三年四班",
+  "teacher":"田大一",
+  "stu_num":"35人"
+},{
+  "grade":"高中-2013级",
+  "class":"三年四班",
+  "teacher":"田大二",
+  "stu_num":"35人"
+},{
+  "grade":"高中-2013级",
+  "class":"三年四班",
+  "teacher":"田大三",
+  "stu_num":"35人"
+}
+]
